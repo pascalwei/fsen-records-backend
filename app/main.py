@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
+from starlette_compress import CompressMiddleware
 
 from app.database import create_db_and_tables
 from app.routers import elections
@@ -42,6 +43,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.add_middleware(CompressMiddleware, zstd=True, brotli=True, gzip=True, minimum_size=1000)
 
 subapp.include_router(
     token.router,
