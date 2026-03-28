@@ -1,9 +1,9 @@
-fastapi[standard]==0.113.0
+fastapi[standard]==0.135.2
 python-jose==3.5.0
-python-multipart==0.0.20
-SQLAlchemy==2.0.41
-SQLAlchemy-Utils==0.41.2
-uvicorn==0.34.3
+python-multipart==0.0.22
+SQLAlchemy==2.0.48
+SQLAlchemy-Utils==0.42.1
+uvicorn==0.42.0
 bcrypt==5.0.0
 starlette==1.0.0
 starlette-compress==1.7.0
